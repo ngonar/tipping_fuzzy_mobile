@@ -74,11 +74,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
     if (response.statusCode == 200) {
       print(response.body);
-
       final parsed = (jsonDecode(response.body));
-
       TipResponse tipResponse = TipResponse.fromJson(parsed);
-
       _setTip(parsed['tip'].toString());
 
       return tipResponse;
